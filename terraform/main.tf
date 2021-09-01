@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "google" {
-  credentials = var.credentials_file
+  #credentials = var.credentials_file
   
   project = var.project
   region = var.region
@@ -16,7 +16,7 @@ provider "google" {
 }
 
 provider "google-beta" {
-  credentials = var.credentials_file
+  #credentials = var.credentials_file
   
   project = var.project
   region = var.region
@@ -29,7 +29,7 @@ module "child"{
   source = ".//child"
   project = var.project
   user_name = var.user_name
-  credentials_file = var.credentials_file
+  #credentials_file = var.credentials_file
 }
 
 resource "google_secret_manager_secret" "sql-password2" {

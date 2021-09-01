@@ -1,4 +1,6 @@
-variable "project" { }
+variable "project" {
+ default     = "gcppy-319110"
+ }
 
 variable "credentials_file" { }
 
@@ -11,4 +13,6 @@ variable "zone" {
   description = "Zone for cloud resources"
   default     = "us-central1-c"
 }
-variable "user_name" { }
+variable "user_name" {
+ default     = "postgres"
+ }
