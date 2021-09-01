@@ -87,7 +87,7 @@ resource "google_secret_manager_secret_version" "sql-ipv42" {
 resource "google_cloud_scheduler_job" "job" {
   name             = "delete_carts"
   description      = "test http job"
-  schedule         = "0 * * * *"
+  schedule         = "0 1 * * *"
   time_zone        = "Europe/Helsinki"
   
 
