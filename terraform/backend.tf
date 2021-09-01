@@ -1,5 +1,5 @@
 terraform {
   backend "gcs" {
-    bucket = "PROJECT_ID-tfstate"
+    bucket = "gcppy-319110-tfstate"
   }
 }
