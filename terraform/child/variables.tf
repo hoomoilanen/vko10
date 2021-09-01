@@ -74,6 +74,6 @@ variable "zip_name" {
 
 variable "zip_source" {
   description = "zip's source."
-  default     = "./functions/delete_old_cart.zip"
+  default     = "./delete_old_cart.zip"
 }
 
