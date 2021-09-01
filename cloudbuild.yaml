@@ -19,7 +19,7 @@ steps:
   - '-c'
   - |
       terraform init
-      fi 
+
 # [START tf-plan]
 - id: 'tf plan'
   name: 'hashicorp/terraform:0.11.14'
@@ -28,7 +28,7 @@ steps:
   - '-c'
   - | 
       terraform plan
-      fi 
+
 # [END tf-plan]
 
 # [START tf-apply]
@@ -39,5 +39,5 @@ steps:
   - '-c'
   - |       
       terraform apply -auto-approve
-      fi
+
 # [END tf-apply]    
