@@ -18,6 +18,7 @@ steps:
   args: 
   - '-c'
   - |
+      cd terraform
       terraform init
 
 # [START tf-plan]
@@ -27,6 +28,7 @@ steps:
   args: 
   - '-c'
   - | 
+      cd terraform
       terraform plan
 
 # [END tf-plan]
@@ -37,7 +39,8 @@ steps:
   entrypoint: 'sh'
   args: 
   - '-c'
-  - |       
+  - | 
+      cd terraform      
       terraform apply -auto-approve
 
 # [END tf-apply]    
