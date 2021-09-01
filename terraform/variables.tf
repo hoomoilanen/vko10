@@ -2,8 +2,6 @@ variable "project" {
  default     = "gcppy-319110"
  }
 
-variable "credentials_file" { }
-
 variable "region" {
   description = "Region for cloud resources"
   default     = "us-central1"
