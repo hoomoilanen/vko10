@@ -87,7 +87,7 @@ resource "google_cloudfunctions_function" "function" {
   name        = "poistoa"
   description = "My function"
   runtime     = "python37"
-  service_account_email = "terraformer@axial-canto-324606.iam.gserviceaccount.com"
+  service_account_email = "juukeli@gcppy-319110.iam.gserviceaccount.com"
 
   available_memory_mb   = 128
   source_archive_bucket = google_storage_bucket.bucket.name
