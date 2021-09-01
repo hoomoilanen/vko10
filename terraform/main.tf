@@ -49,20 +49,20 @@ resource "google_secret_manager_secret_version" "sql-password2" {
   secret_data = module.child.generated_user_password
 }
 
-resource "google_secret_manager_secret" "sql-username2" {
+resource "google_secret_manager_secret" "sql-user2" {
   provider = google-beta
 
-  secret_id = "sql-username2"
+  secret_id = "sql-user2"
 
   replication {
     automatic = true
   }
 }
 
-resource "google_secret_manager_secret_version" "sql-username2" {
+resource "google_secret_manager_secret_version" "sql-user2" {
   provider = google-beta
 
-  secret      = google_secret_manager_secret.sql-username2.id
+  secret      = google_secret_manager_secret.sql-user2.id
   secret_data = module.child.user_name
 }
 
@@ -87,7 +87,7 @@ resource "google_secret_manager_secret_version" "sql-ipv42" {
 resource "google_cloud_scheduler_job" "job" {
   name             = "delete_carts"
   description      = "test http job"
-  schedule         = "0 1 * * *"
+  schedule         = "0 * * * *"
   time_zone        = "Europe/Helsinki"
   
 

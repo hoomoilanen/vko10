@@ -21,7 +21,7 @@ variable "database_version" {
 
 variable "master_instance_name" {
   description = "The name of the master instance to replicate"
-  default     = "fakejuukeli1"
+  default     = "fakejuukeli3"
 }
 
 variable "tier" {
@@ -38,7 +38,7 @@ variable "user_name" { }
 
 variable "user_host" {
   description = "The host for the default user"
-  default     = "%"
+  default     = ""
 }
 
 variable "user_password" {
