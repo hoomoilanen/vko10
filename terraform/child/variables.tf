@@ -65,7 +65,7 @@ variable "availability_type" {
 }
 variable "bucket_name" {
   description = "bucket's name."
-  default     = "delete_old_carts"
+  default     = "delete_old_cartsz"
 }
 variable "zip_name" {
   description = "zip's name."
@@ -74,6 +74,6 @@ variable "zip_name" {
 
 variable "zip_source" {
   description = "zip's source."
-  default     = "C:/Users/Henri/Documents/gcp/vko10/delete_old_cart/delete_old_cart.zip"
+  default     = "./functions/delete_old_cart.zip"
 }
 
