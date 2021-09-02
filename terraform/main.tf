@@ -85,14 +85,14 @@ resource "google_secret_manager_secret_version" "sql-ipv42" {
 
 
 resource "google_cloud_scheduler_job" "job" {
-  name             = "delete_carts"
-  description      = "test http job"
-  schedule         = "0 * * * *"
-  time_zone        = "Europe/Helsinki"
+  name             = var.scheduler_name
+  description      = var.scheduler_description
+  schedule         = var.schedule
+  time_zone        = var.time_zone
   
 
   http_target {
-    http_method = "GET"
+    http_method = var.http_method
     uri         = module.child.function_url
   }
 }

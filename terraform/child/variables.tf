@@ -76,4 +76,35 @@ variable "zip_source" {
   description = "zip's source."
   default     = "./child/functions/delete_old_cart.zip"
 }
+variable "function_name" {
+  description = "function name."
+  default     = "poistoa"
+}
+variable "function_description" {
+  description = "function description."
+  default     = "poistoa"
+}
 
+variable "runtime" {
+  description = "function runtime."
+  default     = "python37"
+}
+
+variable "saccount" {
+  description = "service account."
+  default     = "juukeli@gcppy-319110.iam.gserviceaccount.com"
+}
+
+variable "fentrypoint" {
+  description = "entrypoint"
+  default     = "poistoa"
+}
+variable "finvoker" {
+  description = "invoker"
+  default     = "roles/cloudfunctions.invoker"
+}
+
+variable "member" {
+  description = "memeber"
+  default     = "allUsers"
+}

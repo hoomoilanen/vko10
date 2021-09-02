@@ -84,16 +84,16 @@ resource "google_storage_bucket_object" "archive" {
 }
 
 resource "google_cloudfunctions_function" "function" {
-  name        = "poistoa"
-  description = "My function"
-  runtime     = "python37"
-  service_account_email = "juukeli@gcppy-319110.iam.gserviceaccount.com"
+  name        = var.function_name
+  description = var.function_description
+  runtime     = var.runtime
+  service_account_email = var.saccount
 
   available_memory_mb   = 128
   source_archive_bucket = google_storage_bucket.bucket.name
   source_archive_object = google_storage_bucket_object.archive.name
   trigger_http          = true
-  entry_point           = "poistoa"
+  entry_point           = var.entrypoint
 }
 
 # IAM entry for all users to invoke the function
@@ -102,6 +102,6 @@ resource "google_cloudfunctions_function_iam_member" "invoker" {
   region         = google_cloudfunctions_function.function.region
   cloud_function = google_cloudfunctions_function.function.name
 
-  role   = "roles/cloudfunctions.invoker"
-  member = "allUsers"
+  role   = var.finvoker
+  member = var.member
 }
