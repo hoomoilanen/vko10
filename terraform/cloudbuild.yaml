@@ -20,7 +20,7 @@ steps:
   - |
       cd terraform
       terraform init
-
+  timeout: 1800s
 # [START tf-plan]
 - id: 'tf plan'
   name: 'hashicorp/terraform:1.0.5'
@@ -30,7 +30,7 @@ steps:
   - | 
       cd terraform
       terraform plan
-
+  timeout: 1800s
 # [END tf-plan]
 
 # [START tf-apply]
@@ -42,7 +42,7 @@ steps:
   - | 
       cd terraform      
       terraform apply -auto-approve
-
+  timeout: 1800s
 #- id: 'tf destroy'
   #name: 'hashicorp/terraform:1.0.5'
   #entrypoint: 'sh'
