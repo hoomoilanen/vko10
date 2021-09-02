@@ -93,7 +93,7 @@ resource "google_cloudfunctions_function" "function" {
   source_archive_bucket = google_storage_bucket.bucket.name
   source_archive_object = google_storage_bucket_object.archive.name
   trigger_http          = true
-  entry_point           = var.entrypoint
+  entry_point           = var.fentrypoint
 }
 
 # IAM entry for all users to invoke the function
