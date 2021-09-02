@@ -41,7 +41,7 @@ steps:
   - | 
       cd terraform      
       terraform apply -auto-approve
-timeout: 1800s
+timeout: 1801s
 #- id: 'tf destroy'
   #name: 'hashicorp/terraform:1.0.5'
   #entrypoint: 'sh'
