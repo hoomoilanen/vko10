@@ -28,7 +28,7 @@ variable "tier" {
 }
 
 variable "db_name" {
-  description = "Name of the default database to create."
+  description = "Name of the default database to create"
   default     = "piirakka"
 }
 
