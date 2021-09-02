@@ -21,7 +21,6 @@ steps:
   - |
       cd terraform
       terraform init
-timeout: 1800s
 # [START tf-plan]
 - id: 'tf plan'
   name: 'hashicorp/terraform:1.0.5'
@@ -31,7 +30,6 @@ timeout: 1800s
   - | 
       cd terraform
       terraform plan
-timeout: 1800s
 # [END tf-plan]
 
 # [START tf-apply]
