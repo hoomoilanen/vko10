@@ -65,7 +65,7 @@ variable "availability_type" {
 }
 variable "bucket_name" {
   description = "bucket's name."
-  default     = "delete_old_cartsz"
+  default     = "delete_old_cartszz"
 }
 variable "zip_name" {
   description = "zip's name."
