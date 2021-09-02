@@ -19,7 +19,7 @@ variable "database_version" {
 
 variable "master_instance_name" {
   description = "The name of the master instance to replicate"
-  default     = "fakejuukelisss"
+  default     = "fakejuukelissss"
 }
 
 variable "tier" {

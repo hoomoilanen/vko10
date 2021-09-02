@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 steps:
+timeout: 1800s
 - id: 'tf init'
   name: 'hashicorp/terraform:1.0.5'
   entrypoint: 'sh'
