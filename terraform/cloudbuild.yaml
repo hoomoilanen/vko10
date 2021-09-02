@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 steps:
-timeout: 1800s
+
 - id: 'tf init'
   name: 'hashicorp/terraform:1.0.5'
   entrypoint: 'sh'
@@ -21,7 +21,7 @@ timeout: 1800s
   - |
       cd terraform
       terraform init
-  timeout: 1800s
+timeout: 1800s
 # [START tf-plan]
 - id: 'tf plan'
   name: 'hashicorp/terraform:1.0.5'
@@ -31,7 +31,7 @@ timeout: 1800s
   - | 
       cd terraform
       terraform plan
-  timeout: 1800s
+timeout: 1800s
 # [END tf-plan]
 
 # [START tf-apply]
@@ -43,7 +43,7 @@ timeout: 1800s
   - | 
       cd terraform      
       terraform apply -auto-approve
-  timeout: 1800s
+timeout: 1800s
 #- id: 'tf destroy'
   #name: 'hashicorp/terraform:1.0.5'
   #entrypoint: 'sh'
